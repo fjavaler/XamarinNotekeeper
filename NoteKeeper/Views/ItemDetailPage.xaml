@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="NoteKeeper.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <StackLayout Spacing="20"
+                 Padding="15">
+
+        <!--Course-->
+        <Label Text="Course:"
+               FontSize="Medium" />
+        <!--Course Picker-->
+        <Picker x:Name="NoteCourse"
+                FontSize="Medium">
+            <!--Source of items (data structure)-->
+            <Picker.ItemsSource>
+                <!--Type of data structure used (array)-->
+                <x:Array Type="{x:Type x:String}">
+                    <!--Items (array values)-->
+
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!--Heading-->
+        <Label Text="Heading:"
+               FontSize="Medium" />
+        <Entry x:Name="NoteHeading"
+               FontSize="Medium" />
+
+        <!--Text-->
+        <Label Text="Text"
+               FontSize="Medium" />
+        <Editor x:Name="NoteText"
+                FontSize="Medium" />
+    </StackLayout>
+</ContentPage>
